@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.FragmentForm">
+
+    <Spinner
+        android:id="@+id/droplist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+
+        android:background="@drawable/spinner_background"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textForCheckboxes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+
+        android:layout_marginRight="5dp"
+
+        android:text="Manufacturer:"
+        android:textSize="20sp"
+
+        app:layout_constraintTop_toBottomOf="@id/droplist" />
+
+    <LinearLayout
+        android:id="@+id/checkbox_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/textForCheckboxes"
+        tools:ignore="MissingConstraints">
+
+        <CheckBox
+            android:id="@+id/checkbox_m1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manufacturer1"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="118dp" />
+
+        <CheckBox
+            android:id="@+id/checkbox_m2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manufacturer2"
+            app:layout_constraintTop_toBottomOf="@id/checkbox_m1"
+            tools:layout_editor_absoluteX="5dp"
+            tools:layout_editor_absoluteY="169dp" />
+
+        <CheckBox
+            android:id="@+id/checkbox_m3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manufacturer3"
+            app:layout_constraintTop_toBottomOf="@id/checkbox_m2"
+            tools:layout_editor_absoluteX="5dp"
+            tools:layout_editor_absoluteY="218dp" />
+    </LinearLayout>
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/range_slider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:valueFrom="0"
+        android:valueTo="1000"
+        app:layout_constraintTop_toBottomOf="@id/checkbox_layout"
+        app:values="@array/initial_slider_values" />
+
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ok"
+        android:textSize="20sp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/range_slider" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

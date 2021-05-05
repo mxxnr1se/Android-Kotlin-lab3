@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinner_values">
+        <item></item>
+        <item>Tableware1</item>
+        <item>Tableware2</item>
+        <item>Tableware3</item>
+        <item>Tableware4</item>
+        <item>Tableware5</item>
+    </string-array>
+</resources>
